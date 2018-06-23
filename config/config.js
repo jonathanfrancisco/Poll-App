@@ -3,6 +3,6 @@ module.exports = {
     dbUsername: 'root',
     dbPassword: 'mathematics',
     dbName: 'poll_app',
-    serverPort: process.env || 3000,
+    serverPort: 3000 || process.env,
     sessionSecret: 'cats'
 }
