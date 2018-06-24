@@ -1,8 +1,8 @@
 const config = require('../config/config.js');
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 
 
-module.exports.connect = () => {
+module.exports.getConnection = () => {
     return mysql.createConnection({
         host: config.dbHost,
         user: config.dbUsername,
