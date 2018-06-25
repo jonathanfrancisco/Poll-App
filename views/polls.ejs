@@ -1,0 +1,26 @@
+<%- include('./partials/header',{pageName: 'All Polls'}) %>
+
+    <div class='container mt-4'>
+        <h2>Available Polls</h2>
+        <div class='row'>
+            <% if(polls.length <= 0) {%>
+                <p>No polls available!</p>
+            <% } else { %>
+                <% polls.forEach((poll) => {%>
+                        
+                <div class='col-4 mb-3'>
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><%=poll.title%></h5>
+                            <p class="card-text"><%=poll.description%></p>
+                            <footer class="blockquote-footer"><%=poll.created_at%></footer>
+                            <a href="#" class="btn btn-primary">View Poll</a>
+                        </div>
+                    </div>
+                </div>
+                <% })%>
+            <% } %>
+        </div>
+    </div>
+
+<%- include('./partials/footer') %>
