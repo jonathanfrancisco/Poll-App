@@ -21,6 +21,7 @@ module.exports.getPolls = async (req, res) => {
 
     } catch(err) {
         console.log(err);
+        res.send('Something went wrong!');
     }
  
 
