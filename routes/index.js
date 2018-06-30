@@ -7,5 +7,6 @@ router.get('/', (req, res) => {
 
 router.get('/register', indexController.showRegisterPage);
 router.post('/register', indexController.registerUser);
+router.get('/login', indexController.showLoginPage);
 
 module.exports = router;
