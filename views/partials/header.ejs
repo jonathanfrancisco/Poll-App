@@ -16,17 +16,17 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item <% if(pageName==='Polls') { %>active<% }%>">
                         <a class="nav-link" href="/polls">Polls</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/polls"> My Polls</a>
+                    <li class="nav-item <% if(pageName==='My Polls') { %>active<% }%>">
+                        <a class="nav-link" href="/polls">My Polls</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
+                        <a class="nav-link <% if(pageName==='Login') { %>active<% }%>" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/register">Register</a>
+                        <a class="nav-link <% if(pageName==='Register') { %>active<% }%>" href="/register">Register</a>
                     </li>
                     
                 </ul>
