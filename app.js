@@ -16,6 +16,7 @@ app.use(session({
     resave: false
 
 }));
+app.use(flash());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // ROUTES
