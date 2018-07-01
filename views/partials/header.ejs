@@ -20,15 +20,20 @@
                         <a class="nav-link" href="/polls">Polls</a>
                     </li>
                     <li class="nav-item <% if(pageName==='My Polls') { %>active<% }%>">
-                        <a class="nav-link" href="/polls">My Polls</a>
+                        <a class="nav-link" href="/mypolls">My Polls</a>
                     </li>
+                    <% if(login) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                    <% } else { %>
                     <li class="nav-item">
                         <a class="nav-link <% if(pageName==='Login') { %>active<% }%>" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <% if(pageName==='Register') { %>active<% }%>" href="/register">Register</a>
                     </li>
-                    
+                    <% } %>
                 </ul>
             </div>
         </div>
