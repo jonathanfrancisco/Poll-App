@@ -11,8 +11,9 @@ module.exports.getPolls = async (req, res) => {
         const offset = !req.params.page ? 1 : req.params.page;
         connection.query('DELETE FROM poll WHERE title = ?',['PRIII~']);
         const totalRecords = await connection.query('SELECT count(*) AS count FROM poll');
-        const polls = await connection.query(`SELECT * FROM poll ORDER BY created_at DESC LIMIT ${itemsPerPage} OFFSET ${offset} `);
+        const polls = await connection.query(`SELECT * FROM poll ORDER BY created_at DESC LIMIT ${itemsPerPage} OFFSET ${(offset-1)*itemsPerPage}`);
         connection.end();
+        console.log(polls[0]);
         res.render('polls', {
             polls: polls[0],
             currentPage: offset,
