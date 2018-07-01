@@ -10,6 +10,12 @@
                        <%=msg%>
                     </div>
                     <% }) %>
+                <% } else if(errorMessages.length > 0) { %>
+                    <% errorMessages.forEach((msg) => { %>
+                    <div class="alert alert-danger" role="alert">
+                            <%=msg%>
+                    </div>
+                    <% }) %>
                 <% } %>
                 <form method='POST' action='/register'>
                     <div class="form-group">
